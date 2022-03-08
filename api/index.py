@@ -9,6 +9,6 @@ class handler(BaseHTTPRequestHandler):
         self.send_header("Content-Type", "text/plain")
         self.end_headers()
 
-        response = uuid4()
+        response = str(uuid4())
         self.wfile.write(response.encode())
         return
